@@ -6,19 +6,29 @@ public class TimedSpawn : MonoBehaviour {
 
 	public GameObject spawnee;
 	public bool stopSpawning = false;
-	public float spawnTime;
 	public float spawnDelay;
+	public float startDelay;
+	public float waveDelay;
+	public int enemyCount;
+	private int initEnemyCount;
+	public AvacadoManager am;
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("SpawnObject", spawnTime, spawnDelay);
+		initEnemyCount = enemyCount;
+		StartCoroutine( SpawnObject());
 	}
 	
 	// Update is called once per frame
-	public void SpawnObject () {
-		Instantiate (spawnee, transform.position, transform.rotation);
-		if(stopSpawning){
-			CancelInvoke("SpawnObject");
+	IEnumerator SpawnObject () {
+		yield return new WaitForSeconds (startDelay);
+		while (enemyCount > 0) {
+			enemyCount--;
+			Instantiate (spawnee, transform.position, transform.rotation);
+			//am.CreateAvacado();
+			yield return new WaitForSeconds (spawnDelay);
 		}
+		enemyCount = initEnemyCount;
+		yield return new WaitForSeconds (waveDelay);
 	}
 }

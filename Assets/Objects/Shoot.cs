@@ -29,4 +29,10 @@ public class Shoot : MonoBehaviour {
 
 		Destroy (bullet, 2.0f);
 	}
+	void OnCollisionEnter(Collision col){
+		if (col.gameObject.tag == "Enemy") {
+			Destroy (gameObject);
+		}
+	}
+
 }

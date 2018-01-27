@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpObject : MonoBehaviour {
+
 	
 	private Valve.VR.EVRButtonId touchPad = Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad;
-	private Valve.VR.EVRButtonId triggerButton = Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger;
+	//private Valve.VR.EVRButtonId triggerButton = Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger;
 
 	private SteamVR_TrackedObject trackedObj;
 
@@ -26,6 +27,8 @@ public class PickUpObject : MonoBehaviour {
 			Debug.Log("Controller not initialized");
 			return;
 		}
+
+
 		Debug.Log ("pickup");
 		if (controller.GetPressDown(touchPad) && pickup != null)
 		{
