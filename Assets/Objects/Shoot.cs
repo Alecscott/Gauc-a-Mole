@@ -23,11 +23,13 @@ public class Shoot : MonoBehaviour {
 	}
 
 	void Fire(object sender, ClickedEventArgs e){
+		if(this.gameObject.transform.parent != null){
 		Debug.Log ("Fired");
 		var bullet = (GameObject)Instantiate(bulletPrefab,bulletSpawn.position,bulletSpawn.rotation);
 		bullet.GetComponent<Rigidbody> ().velocity = bullet.transform.forward * 50;
 
 		Destroy (bullet, 2.0f);
+		}
 	}
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "Enemy") {

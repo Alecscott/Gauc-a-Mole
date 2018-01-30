@@ -27,6 +27,7 @@ public class BasicAI : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "InteractionObject") {
+			
 			Destroy (gameObject);
 		}
 	}
