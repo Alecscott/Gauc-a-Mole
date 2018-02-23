@@ -19,12 +19,27 @@ ModelImporter:
     4300000: polySurface1
     4300002: Gun
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackGun
+    second: {fileID: 2100000, guid: 2653739b1cf97604aa6db48a42f4d645, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrownGun
+    second: {fileID: 2100000, guid: b61198e8b1aff92408c109a43a3fb7cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreyGun
+    second: {fileID: 2100000, guid: 859d183772879ed4aac013dfaadec19a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

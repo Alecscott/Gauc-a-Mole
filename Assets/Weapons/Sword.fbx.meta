@@ -15,12 +15,27 @@ ModelImporter:
     4300000: SwordObject:pCube1
     4300002: Sword
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrownSword
+    second: {fileID: 2100000, guid: 3d0630f10ca167a478cf624a169fa0f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GoldSword
+    second: {fileID: 2100000, guid: 36b1964a8e291b549a3e310a20ac8aee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhiteSword
+    second: {fileID: 2100000, guid: 5d0077c82da7b8b40bfce537f60e358a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

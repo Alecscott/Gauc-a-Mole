@@ -4,11 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - FxTemporaire
-  - projectile
   - Enemy
   - InteractionObject
-  - Controller
+  - Gun
+  - Right
+  - Left
+  - SoundManager
   layers:
   - Default
   - TransparentFX

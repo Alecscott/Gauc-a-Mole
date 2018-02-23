@@ -58,12 +58,16 @@
      <Compile Include="Assets\Enemies\Destory.cs" />
      <Compile Include="Assets\Enemies\TimedSpawn.cs" />
      <Compile Include="Assets\Enemies\WaveManager.cs" />
+     <Compile Include="Assets\Objects\BulletChanges.cs" />
+     <Compile Include="Assets\Objects\BulletCollision.cs" />
      <Compile Include="Assets\Objects\PickUpObject.cs" />
      <Compile Include="Assets\Objects\RWVR_InteractionController.cs" />
      <Compile Include="Assets\Objects\RWVR_InteractionObject.cs" />
      <Compile Include="Assets\Objects\RWVR_SimpleGrab.cs" />
      <Compile Include="Assets\Objects\RWVR_SnapToController.cs" />
      <Compile Include="Assets\Objects\Shoot.cs" />
+     <Compile Include="Assets\Objects\Shooting.cs" />
+     <Compile Include="Assets\Objects\Shooting2.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -109,6 +113,7 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\SoundManager.cs" />
      <Compile Include="Assets\Sounds\PlaySound.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />

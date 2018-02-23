@@ -8,9 +8,14 @@ public class BasicAI : MonoBehaviour {
 	private Rigidbody rb;
 	public GameObject player;
 	private Vector3 playerPos;
+	private SoundManager soundScript;
 
 	void Start(){
 		player = GameObject.FindWithTag("Player");
+
+		// Finds the 'SoundManager' object, grabs the script 'SoundManager'
+		soundScript = (SoundManager) GameObject.Find("SoundManager").GetComponent(typeof(SoundManager));
+		soundScript.PlayAudioClipRepeated ("Running");
 	}
 
 	void Update () {
@@ -27,7 +32,7 @@ public class BasicAI : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "InteractionObject") {
-			
+			soundScript.PlayAudioClip("Smash2");
 			Destroy (gameObject);
 		}
 	}

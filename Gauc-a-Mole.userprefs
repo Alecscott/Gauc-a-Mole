@@ -1,17 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Objects\Shoot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SoundManager.cs">
     <Files>
-      <File FileName="Assets\Objects\RWVR_InteractionController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Enemies\TimedSpawn.cs" Line="1" Column="1" />
-      <File FileName="Assets\AvacadoManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Enemies\Avacado.cs" Line="1" Column="1" />
-      <File FileName="Assets\Enemies\AvacadoTree.cs" Line="1" Column="1" />
-      <File FileName="Assets\Enemies\WaveManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Enemies\BasicAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Sounds\PlaySound.cs" Line="1" Column="1" />
-      <File FileName="Assets\Objects\Shoot.cs" Line="26" Column="21" />
-      <File FileName="Assets\Objects\RWVR_SnapToController.cs" Line="21" Column="56" />
+      <File FileName="Assets\Enemies\Destory.cs" Line="12" Column="29" />
+      <File FileName="Assets\Objects\Shooting2.cs" Line="108" Column="18" />
+      <File FileName="Assets\SoundManager.cs" Line="34" Column="3" NotebookId="1" />
+      <File FileName="Assets\Enemies\BasicAI.cs" Line="17" Column="99" NotebookId="1" />
+      <File FileName="Assets\Objects\Shooting.cs" Line="205" Column="41" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
