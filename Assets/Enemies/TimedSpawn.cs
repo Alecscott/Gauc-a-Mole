@@ -5,13 +5,13 @@ using UnityEngine;
 public class TimedSpawn : MonoBehaviour {
 
 	public GameObject spawnee;
-	public bool stopSpawning = false;
+	public static bool waveStarted = false;
 	public float spawnDelay;
 	public float startDelay;
-	public float waveDelay;
-	public int enemyCount;
+	private int enemyCount = 10;
 	private int initEnemyCount;
-	public AvacadoManager am;
+	public static bool waveReady = true;
+	public bool waveReady2;
 
 	// Use this for initialization
 	void Start () {
@@ -20,15 +20,30 @@ public class TimedSpawn : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	void Update () {
+		waveReady2 = waveReady;
+	}
+
 	IEnumerator SpawnObject () {
-		yield return new WaitForSeconds (startDelay);
-		while (enemyCount > 0) {
-			enemyCount--;
-			Instantiate (spawnee, transform.position, transform.rotation);
-			//am.CreateAvacado();
-			yield return new WaitForSeconds (spawnDelay);
+		while (true) {
+			yield return new WaitForSeconds (startDelay);
+			while (enemyCount != 0 && waveReady == true) {
+				GameObject newAvacado = (GameObject)Instantiate (spawnee, transform.position, transform.rotation);
+				WaveManager.CreatedAvacado (newAvacado);
+				enemyCount--;
+				//Debug.Log ("Avacado Created");
+				waveStarted = true;
+
+				yield return new WaitForSeconds (spawnDelay);
+			}
+			//initEnemyCount = WaveManager.waveCount * 1;
+			initEnemyCount = WaveManager.waveCount * 1;
+			if (WaveManager.AvacadoList.Count == 0 && waveStarted) {
+				WaveManager.waveEnd = true;
+				waveReady = false;
+				Debug.Log ("Waiting For EndWave");
+				enemyCount = initEnemyCount;
+			}
 		}
-		enemyCount = initEnemyCount;
-		yield return new WaitForSeconds (waveDelay);
 	}
 }

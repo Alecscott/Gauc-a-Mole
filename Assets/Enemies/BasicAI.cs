@@ -33,6 +33,7 @@ public class BasicAI : MonoBehaviour {
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "InteractionObject") {
 			soundScript.PlayAudioClip("Smash2");
+			WaveManager.DestroyedAvacado (this.gameObject);
 			Destroy (gameObject);
 		}
 	}

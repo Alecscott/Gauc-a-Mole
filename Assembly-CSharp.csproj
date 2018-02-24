@@ -54,6 +54,7 @@
      <Compile Include="Assets\AvacadoManager.cs" />
      <Compile Include="Assets\Enemies\Avacado.cs" />
      <Compile Include="Assets\Enemies\AvacadoTree.cs" />
+     <Compile Include="Assets\Enemies\AvacadoTreeManager.cs" />
      <Compile Include="Assets\Enemies\BasicAI.cs" />
      <Compile Include="Assets\Enemies\Destory.cs" />
      <Compile Include="Assets\Enemies\TimedSpawn.cs" />

@@ -9,6 +9,7 @@ public class Destory : MonoBehaviour {
 	// Update is called once per frame
 	void OntriggerEnter (Collider col) {
 		if (col.gameObject.tag == "Enemy") { 
+			WaveManager.DestroyedAvacado (col.gameObject);
 			Destroy (col.gameObject);
 		}
 	}
